@@ -1,0 +1,479 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Modal</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <button ion-button (click)="Open()">Open Modal
+  </button>
+
+  <!-- Float the icon right
+  <button ion-button icon-right>
+    <ion-icon name="home">Home</ion-icon>
+  </button>
+-->
+  <!-- Only icon (no text) -->
+  <br>
+  <button ion-button icon-only>
+    <ion-icon name="home">Maou-Sama
+    </ion-icon>
+  </button>
+  <button (click)="button2()" ion-button full>Full Button</button>
+  <button ion-button (click)="button3()" block>Block Button</button>
+  <ion-item>
+    <ion-icon name="logo-facebook" item-start></ion-icon>
+    Followers
+    <ion-badge color="secondary" item-end>1.6b</ion-badge>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="logo-twitter" item-start></ion-icon>
+    Followers
+    <ion-badge item-end>260k</ion-badge>
+  </ion-item>
+  <button (click)="button1()" ion-button color="secondary" outline>Secret Button</button>
+  <!--
+  <ion-header>
+      <ion-navbar>
+        <ion-buttons start>
+          <button ion-button icon-only>
+            <ion-icon name="contact"></ion-icon>
+          </button>
+        </ion-buttons>
+    
+        <ion-buttons end>
+          <button ion-button icon-only>
+            <ion-icon name="search"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+    </ion-header>
+    
+  -->
+
+  <ion-list>
+    <ion-item>
+      Thanos tried to kill me
+      <button ion-button outline item-end icon-left>
+        <ion-icon name="star"></ion-icon>
+        Left Icon
+      </button>
+    </ion-item>
+  </ion-list>
+  <ion-card>
+
+    <ion-card-header>
+      What do you think I am? I am a card
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Add card content here! -->
+      I used to be just plain text, but now, I'm so much more
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Explore Nearby
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Wanna go shopping?
+      </button>
+
+      <button ion-item>
+        <ion-icon name="medical" item-start></ion-icon>
+        You sick?
+      </button>
+
+      <button ion-item>
+        <ion-icon name="cafe" item-start></ion-icon>
+        Let's get something to eat
+      </button>
+
+      <button ion-item>
+        <ion-icon name="paw" item-start></ion-icon>
+        Bow Wow
+      </button>
+
+      <ion-card>
+        <img src="../assets/imgs/nin-live.png" />
+        <ion-card-content>
+          <ion-card-title>
+            Well, Well, Well
+          </ion-card-title>
+          <p>
+            Well, it was nice when it finally worked.
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <!-- <img src="../assets/imgs/card-saopaolo.png"/> -->
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <!--supposed to be an avatar here:/-->
+      </ion-avatar>
+      <h2>Marty McFly</h2>
+      <p>November 5, 1955</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+        Whoa. This is heavy.</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>Centurion</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+  <ion-item>
+    <ion-label>Solo: A Star Wars Story</ion-label>
+    <ion-checkbox color="light" checked="false"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Ant-Man and the Wasp</ion-label>
+    <ion-checkbox color="secondary" disabled="false"></ion-checkbox>
+  </ion-item>
+  <ion-card (tap)="tapEvent($event)">
+    <ion-item>
+      Tapped: {{tap}} times
+    </ion-item>
+  </ion-card>
+  <ion-content>
+    <!-- Real floating action button, fixed. It will not scroll with the content -->
+    <ion-fab top right edge>
+      <button ion-fab mini>
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <ion-fab-list>
+        <button ion-fab>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </button>
+        <button ion-fab>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </button>
+        <button ion-fab>
+          <ion-icon name="logo-vimeo"></ion-icon>
+        </button>
+        <button ion-fab>
+          <ion-icon name="logo-googleplus"></ion-icon>
+        </button>
+      </ion-fab-list>
+    </ion-fab>
+  </ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        A lot of text and it will be separated into different columnsA lot of text and it will be separated into different columnsA
+        lot of text and it will be separated into different columnsA lot of text and it will be separated into different
+        columnsA lot of text and it will be separated into different columnsA lot of text and it will be separated into different
+        columns
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+  <ion-item>
+    <ion-label fixed>Password</ion-label>
+    <ion-input floating type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input floating type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>User</ion-label>
+    <ion-input type="text"></ion-input>
+
+
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="img/avatar-finn.png">
+      </ion-avatar>
+      <h2>Finn</h2>
+      <h3>Don't Know What To Do!</h3>
+      <p>I've had a pretty messed up day. If we just...</p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="img/slimer.png">
+        </ion-avatar>
+        <h2>Slimer</h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>My Neighbor Totoro</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+
+  <!--Toolbar
+                            <ion-menu [content]="content">
+                                <ion-header>
+                                  <ion-toolbar>
+                                    <ion-title>Menu</ion-title>
+                                  </ion-toolbar>
+                                </ion-header>
+                                <ion-content>
+                                  <ion-list>
+                                    <button ion-item (click)="openPage(homePage)">
+                                      Home
+                                    </button>
+                                    <button ion-item (click)="openPage(friendsPage)">
+                                      Friends
+                                    </button>
+                                    <button ion-item (click)="openPage(eventsPage)">
+                                      Events
+                                    </button>
+                                    <button ion-item (click)="closeMenu()">
+                                      Close Menu
+                                    </button>
+                                  </ion-list>
+                                </ion-content>
+                              </ion-menu>
+                              
+                              <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+                              -->
+  <ion-list radio-group>
+    <ion-list-header>
+      Language
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Go</ion-label>
+      <ion-radio checked="true" value="go"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Rust</ion-label>
+      <ion-radio value="rust"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Python</ion-label>
+      <ion-radio value="python" disabled="true"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-range [(ngModel)]="brightness">
+      <ion-icon range-left small name="sunny"></ion-icon>
+      <ion-icon range-right name="sunny"></ion-icon>
+    </ion-range>
+  </ion-item>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Puppies
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Ruby</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-kitten-1.jpg">
+        </ion-thumbnail>
+        <h2>Luna</h2>
+      </ion-item>
+
+    </ion-list>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Gaming</ion-label>
+      <ion-select [(ngModel)]="gaming">
+        <ion-option value="nes">NES</ion-option>
+        <ion-option value="n64">Nintendo64</ion-option>
+        <ion-option value="ps">PlayStation</ion-option>
+        <ion-option value="genesis">Sega Genesis</ion-option>
+        <ion-option value="saturn">Sega Saturn</ion-option>
+        <ion-option value="snes">SNES</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label>Toppings</ion-label>
+      <ion-select [(ngModel)]="toppings" multiple="true" cancelText="Nah" okText="Okay!">
+        <ion-option value="bacon" selected="true">Bacon</ion-option>
+        <ion-option value="olives">Black Olives</ion-option>
+        <ion-option value="xcheese" selected="true">Extra Cheese</ion-option>
+        <ion-option value="peppers">Green Peppers</ion-option>
+        <ion-option value="mushrooms">Mushrooms</ion-option>
+        <ion-option value="onions">Onions</ion-option>
+        <ion-option value="pepperoni">Pepperoni</ion-option>
+        <ion-option value="pineapple">Pineapple</ion-option>
+        <ion-option value="sausage">Sausage</ion-option>
+        <ion-option value="Spinach">Spinach</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-slides pager>
+
+    <ion-slide style="background-color: green">
+      <h2>Slide 1</h2>
+    </ion-slide>
+
+    <ion-slide style="background-color: blue">
+      <h2>Slide 2</h2>
+    </ion-slide>
+
+    <ion-slide style="background-color: red">
+      <h2>Slide 3</h2>
+    </ion-slide>
+
+  </ion-slides>
+  <!--<ion-item>
+            <ion-label>Check out the right corner</ion-label>
+            <ion-toggle disabled="false"></ion-toggle>
+          </ion-item>
+          <ion-header>
+              <ion-toolbar>
+                <ion-title>Toolbar</ion-title>
+              </ion-toolbar>
+            </ion-header>
+          -->
+  <ion-content></ion-content>
+  <!--
+            <ion-footer>
+              <ion-toolbar>
+                <ion-title>Footer</ion-title>
+              </ion-toolbar>
+            </ion-footer>
+            <ion-header>
+                <ion-navbar color="dark">
+                  <ion-title>Dark</ion-title>
+                </ion-navbar>
+              </ion-header>
+              
+              
+              <ion-header>
+                <ion-navbar color="danger">
+                  <ion-title>Danger</ion-title>
+                </ion-navbar>
+              </ion-header>
+              
+              <ion-header>
+                <ion-navbar color="secondary">
+                  <ion-title>Secondary</ion-title>
+                </ion-navbar>
+              </ion-header>
+              -->
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate">
+    </ion-datetime>
+  </ion-item>
+  <ion-tabs>
+    <ion-tab tabIcon="call" [root]="tabOne" tabBadge="3" tabBadgeStyle="danger"></ion-tab>
+    <ion-tab tabIcon="chatbubbles" [root]="tabTwo" tabBadge="14" tabBadgeStyle="danger"></ion-tab>
+    <ion-tab tabIcon="musical-notes" [root]="tabThree"></ion-tab>
+  </ion-tabs>
+  <!-- Segment in content -->
+  <ion-segment [(ngModel)]="relationship" color="primary" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="friends">
+      Friends
+    </ion-segment-button>
+    <ion-segment-button value="enemies">
+      Enemies
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment [(ngModel)]="icons" color="secondary">
+    <ion-segment-button value="camera">
+      <ion-icon name="camera"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="bookmark">
+      <ion-icon name="bookmark"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+  <!-- <form [formGroup]="myForm">
+    <ion-segment formControlName="mapStyle" color="danger">
+      <ion-segment-button value="standard">
+        Standard
+      </ion-segment-button>
+      <ion-segment-button value="hybrid">
+        Hybrid
+      </ion-segment-button>
+      <ion-segment-button value="sat">
+        Satellite
+      </ion-segment-button>
+    </ion-segment>
+  </form>-->
+</ion-content>

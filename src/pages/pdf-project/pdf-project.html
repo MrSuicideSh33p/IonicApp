@@ -1,0 +1,60 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ionic PDF</ion-title>
+  </ion-navbar>
+</ion-header>
+  <!-- for(var i=0;i<5;i++)
+  { -->
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Invoice To: </ion-label>
+      <ion-input [(ngModel)]="letterObj.invoiceto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Invoice No.</ion-label>
+      <ion-input [(ngModel)]="letterObj.invoice"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Sl No. </ion-label>
+      <ion-input [(ngModel)]="slno"></ion-input>
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-label stacked>Item Description </ion-label>
+      <ion-input [(ngModel)]="letterObj.itemdesc"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Price</ion-label>
+      <ion-input [(ngModel)]="price"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Quantity</ion-label>
+      <ion-input [(ngModel)]="qty"></ion-input>
+  </ion-item>
+
+  <!-- <ion-item>
+    <ion-label stacked>Total</ion-label>
+      <ion-input [(ngModel)]="letterObj.total"></ion-input>
+  </ion-item> -->
+  <!-- } -->
+  <ion-item>
+    <ion-label stacked>Payment Info</ion-label>
+      <ion-input [(ngModel)]="letterObj.payment"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Account No.</ion-label>
+      <ion-input [(ngModel)]="letterObj.account"></ion-input>
+  </ion-item>
+  
+  <button ion-button full (click)="createPdf()">Create PDF</button>
+  <button ion-button full (click)="downloadPdf()" color="secondary" [disabled]="!pdfObj">Download PDF</button>
+  
+</ion-content>
+  

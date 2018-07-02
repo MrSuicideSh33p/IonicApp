@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Blog</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-input [(ngModel)]="name" placeholder="My Talk"></ion-input>
+  </ion-item>
+
+  <!-- AddOnBlur -> false, else it will autofill when out of focus -->
+  <rl-tag-input [(ngModel)]="topics"  [addOnBlur]="false" [autocomplete]="true" [autocompleteItems]="preparedTags" placeholder="Topics">
+  </rl-tag-input>
+  <button ion-button full (click)="addTalk()">Add Talk</button>
+  <ion-list>
+    <ion-item *ngFor="let talk of talks">
+      {{talk.name}}
+      <p>
+        <!-- So that everything in there separated by a space won't be considered as array, rather taken in here -->
+        {{talk.topics.join(' ') }}
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

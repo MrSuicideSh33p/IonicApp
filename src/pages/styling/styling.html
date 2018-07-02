@@ -1,0 +1,66 @@
+<!--
+  Generated template for the StylingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Styling</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="container">
+    <form action="post">
+      <!-- <form action='Submit()'> -->
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" [(ngModel)]="fname" placeholder="Enter your first name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" [(ngModel)]="lname" placeholder="Enter your last name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Country</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country" [(ngModel)]="country">
+            <option value="India">India</option>
+            <option value="Bahrain">Canada</option>
+            <option value="USA">USA</option>          
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" [(ngModel)]="subject" placeholder="Input text here" style="height:100px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit" (click)="Submit()">
+      </div>
+    </form>
+  </div>
+  <div style="text-align: center">
+    <h1>Two-Way Binding Being Tested Here</h1>
+      Hello: {{User}}<br>
+      <input type="text" [(ngModel)]="User">
+      </div>
+</ion-content>

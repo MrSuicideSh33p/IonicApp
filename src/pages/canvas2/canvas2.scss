@@ -1,0 +1,22 @@
+canvas-draw {
+ 
+  .scroll-content{
+    //To stop the video from popping around
+      overflow: hidden;
+  }
+
+  height: 100%;
+  width: 100%;
+  display: block;
+
+  #top-toolbar{
+      position: absolute;
+      top: 0;
+  }
+  //Display 0 px from bottom
+  #bottom-toolbar {
+      position: absolute;
+      bottom: 0;
+  }
+
+}

@@ -1,0 +1,14 @@
+page-csv {
+  //To properly use space for scrolling
+  .data-scroll{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .data-table{
+    min-width: 1500px;
+  }
+}

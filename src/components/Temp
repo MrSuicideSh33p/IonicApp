@@ -1,0 +1,2 @@
+<div class="form-group" [ngClass]="{'has-error':!complexForm.controls['topics'].valid && complexForm.controls['topics'].touched}">
+</div>
